@@ -16,10 +16,10 @@
 #![crate_name = "i2cdev"]
 #![crate_type = "lib"]
 
-extern crate libc;
-extern crate byteorder;
 #[macro_use]
 extern crate bitflags;
+extern crate byteorder;
+extern crate libc;
 #[macro_use]
 extern crate nix;
 
@@ -29,7 +29,6 @@ mod ffi;
 pub mod core;
 pub mod sensors;
 
-#[cfg(any(target_os = "linux", target_os = "android"))]
 pub mod linux;
 
 #[cfg(test)]
